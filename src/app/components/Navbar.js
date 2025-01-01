@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 function Navbar() {
   const router = useRouter();
@@ -13,7 +14,10 @@ function Navbar() {
   };
 
   return (
-    <div className="w-full flex justify-center mt-2">
+    <div className="w-full flex justify-around items-center mt-2 z-20">
+        <div className=" font-bold text-white text-3xl">
+            StudyBuddy
+        </div>
       <nav className="flex bg-white rounded-2xl">
         <div
           className={`font-bold text-blue-300 rounded-l-2xl flex justify-center px-4 py-3 ${
@@ -40,6 +44,10 @@ function Navbar() {
           Store
         </div>
       </nav>
+      <div className=" flex justify-center items-center gap-1">
+        <Image src="/pngtree-round-cartoon-gold-coin-png-image_4488009-removebg-preview.png" width={30} height={30}/>
+           <div className=" bg-white px-3 font-bold rounded-xl">26</div>
+      </div>
     </div>
   );
 }
